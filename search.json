@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Little Book of Bioinformatics",
+    "section": "",
+    "text": "Preface to A Little Book of Bioinformatics\nWelcome to A Little Book of Bioinformatics. This is an online book, under continual development, which I am building as and when topics come to mind or prominence.\nMy goal is that this online book will come to be a fairly transparent and honest reference for students in bioinformatics, and maybe for some researchers, too.\nI would be very grateful for feedback by email or through the GitHub repository Issues page"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "mafft.html#how-does-mafft-work",
+    "href": "mafft.html#how-does-mafft-work",
+    "title": "MAFFT",
+    "section": "How does MAFFT work?",
+    "text": "How does MAFFT work?\n\n\n\n\nKatoh, Kazutaka, Kazuharu Misawa, Kei-Ichi Kuma, and Takashi Miyata. 2002. “MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform.” Nucleic Acids Res. 30 (14): 3059–66. https://doi.org/10.1093/nar/gkf436.\n\n\nKatoh, Kazutaka, John Rozewicki, and Kazunori D Yamada. 2019. “MAFFT Online Service: Multiple Sequence Alignment, Interactive Sequence Choice and Visualization.” Brief. Bioinform. 20 (4): 1160–66. https://doi.org/10.1093/bib/bbx108.\n\n\nKatoh, Kazutaka, and Daron M Standley. 2013. “MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability.” Mol. Biol. Evol. 30 (4): 772–80. https://doi.org/10.1093/molbev/mst010.\n\n\nRozewicki, John, Songling Li, Karlou Mar Amada, Daron M Standley, and Kazutaka Katoh. 2019. “MAFFT-DASH: Integrated Protein Sequence and Structural Alignment.” Nucleic Acids Res. 47 (W1): W5–10. https://doi.org/10.1093/nar/gkz342."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Katoh, Kazutaka, Kazuharu Misawa, Kei-Ichi Kuma, and Takashi Miyata.\n2002. “MAFFT: A Novel Method for Rapid Multiple\nSequence Alignment Based on Fast Fourier Transform.” Nucleic\nAcids Res. 30 (14): 3059–66. https://doi.org/10.1093/nar/gkf436.\n\n\nKatoh, Kazutaka, John Rozewicki, and Kazunori D Yamada. 2019.\n“MAFFT Online Service: Multiple Sequence Alignment,\nInteractive Sequence Choice and Visualization.” Brief.\nBioinform. 20 (4): 1160–66. https://doi.org/10.1093/bib/bbx108.\n\n\nKatoh, Kazutaka, and Daron M Standley. 2013. “MAFFT\nMultiple Sequence Alignment Software Version 7: Improvements in\nPerformance and Usability.” Mol. Biol. Evol. 30 (4):\n772–80. https://doi.org/10.1093/molbev/mst010.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nRozewicki, John, Songling Li, Karlou Mar Amada, Daron M Standley, and\nKazutaka Katoh. 2019. “MAFFT-DASH: Integrated Protein\nSequence and Structural Alignment.” Nucleic Acids Res.\n47 (W1): W5–10. https://doi.org/10.1093/nar/gkz342."
+  }
+]
