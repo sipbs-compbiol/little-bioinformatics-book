@@ -1,0 +1,3 @@
+# Representing Biological Data {#sec-representing-biological-data .unnumbered}
+
+This section of the book will introduce the computational representation of biological data.

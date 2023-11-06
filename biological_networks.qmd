@@ -1,0 +1,3 @@
+# Biological Networks {#sec-biological-networks .unnumbered}
+
+This section of the book will introduce network representations in biology.

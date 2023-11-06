@@ -1,0 +1,3 @@
+# Pairwise Sequence Alignment {#sec-pairwise-sequence-alignment .unnumbered}
+
+This section of the book will introduce the concepts, algorithms, and application of pairwise sequence alignment.

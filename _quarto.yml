@@ -26,9 +26,17 @@ book:
     - intro.qmd
     - summary.qmd
     
+    - part: representing_biological_data.qmd
+    
+    - part: biological_databases.qmd
+    
+    - part: pairwise_sequence_alignment.qmd
+
     - part: multiple_sequence_alignment.qmd
       chapters: 
         - mafft.qmd
+    
+    - part: biological_networks.qmd
     
     - references.qmd
 
