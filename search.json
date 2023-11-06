@@ -21,6 +21,27 @@
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "representing_biological_data.html",
+    "href": "representing_biological_data.html",
+    "title": "Representing Biological Data",
+    "section": "",
+    "text": "This section of the book will introduce the computational representation of biological data."
+  },
+  {
+    "objectID": "biological_databases.html",
+    "href": "biological_databases.html",
+    "title": "Biological Databases",
+    "section": "",
+    "text": "This section of the book will introduce biological databases."
+  },
+  {
+    "objectID": "pairwise_sequence_alignment.html",
+    "href": "pairwise_sequence_alignment.html",
+    "title": "Pairwise Sequence Alignment",
+    "section": "",
+    "text": "This section of the book will introduce the concepts, algorithms, and application of pairwise sequence alignment."
+  },
+  {
     "objectID": "multiple_sequence_alignment.html",
     "href": "multiple_sequence_alignment.html",
     "title": "Multiple Sequence Alignment",
@@ -54,6 +75,13 @@
     "title": "MAFFT",
     "section": "Where can I find out more about MAFFT?",
     "text": "Where can I find out more about MAFFT?\n\nMAFFT v7 tips\nMAFFT v7 algorithm\n\n\n\n\n\nFeng, Da-Fei, and Russell F Doolittle. 1987. “Progressive Sequence Alignment as a Prerequisite to Correct Phylogenetic Trees.” J. Mol. Evol. 25 (4): 351–60. https://doi.org/10.1007/BF02603120.\n\n\nKatoh, Kazutaka, Kazuharu Misawa, Kei-Ichi Kuma, and Takashi Miyata. 2002. “MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform.” Nucleic Acids Res. 30 (14): 3059–66. https://doi.org/10.1093/nar/gkf436.\n\n\nKatoh, Kazutaka, John Rozewicki, and Kazunori D Yamada. 2019. “MAFFT Online Service: Multiple Sequence Alignment, Interactive Sequence Choice and Visualization.” Brief. Bioinform. 20 (4): 1160–66. https://doi.org/10.1093/bib/bbx108.\n\n\nKatoh, Kazutaka, and Daron M Standley. 2013. “MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability.” Mol. Biol. Evol. 30 (4): 772–80. https://doi.org/10.1093/molbev/mst010.\n\n\nKatoh, Kazutaka, and Hiroyuki Toh. 2008a. “Recent Developments in the MAFFT Multiple Sequence Alignment Program.” Brief. Bioinform. 9 (4): 286–98. https://doi.org/10.1093/bib/bbn013.\n\n\n———. 2008b. “Recent Developments in the MAFFT Multiple Sequence Alignment Program.” Brief. Bioinform. 9 (4): 286–98. https://doi.org/10.1093/bib/bbn013.\n\n\nRozewicki, John, Songling Li, Karlou Mar Amada, Daron M Standley, and Kazutaka Katoh. 2019. “MAFFT-DASH: Integrated Protein Sequence and Structural Alignment.” Nucleic Acids Res. 47 (W1): W5–10. https://doi.org/10.1093/nar/gkz342."
+  },
+  {
+    "objectID": "biological_networks.html",
+    "href": "biological_networks.html",
+    "title": "Biological Networks",
+    "section": "",
+    "text": "This section of the book will introduce network representations in biology."
   },
   {
     "objectID": "references.html",
