@@ -1,7 +1,104 @@
-# MAFFT {#sec-mafft .unnumbered}
+# `MAFFT` {#sec-MAFFT .unnumbered}
 
-MAFFT is a very fast consistency-based iterative multiple sequence alignment method, suitable for aligning large sequence sets.
+`MAFFT` is a very fast progressive alignment method, suitable for aligning large sequence sets, and tuneable for a range of input circumstances.
 
-MAFFT stands for Multiple Alignment using Fast Fourier Transform, and was first described in 2002 [@Katoh2002-nz]. Since then it has received multiple enhancements and extensions to improve scalability to larger sequence sets, and integration of other data such as protein structures [Katoh2008-hj; @Katoh2013-jm; @Rozewicki2019-vj; @Katoh2019-et].
+`MAFFT` stands for Multiple Alignment using Fast Fourier Transform, and was first described in 2002 [@Katoh2002-nz]. Since then it has received multiple enhancements and extensions to improve scalability to larger sequence sets, and integration of other data such as protein structures [@Katoh2008-hj; @Katoh2013-jm; @Rozewicki2019-vj; @Katoh2019-et].
 
-## How does MAFFT work?
+## Where can I download `MAFFT`?
+
+- [https://`MAFFT`.cbrc.jp/alignment/software/](https://`MAFFT`.cbrc.jp/alignment/software/)
+
+## Where can I use `MAFFT` in a browser?
+
+- [https://mafft.cbrc.jp/alignment/server/](https://mafft.cbrc.jp/alignment/server/)
+- [https://www.ebi.ac.uk/Tools/msa/`MAFFT`/](https://www.ebi.ac.uk/Tools/msa/`MAFFT`/)
+- [https://usegalaxy.eu/](https://usegalaxy.eu/)
+
+## How does `MAFFT` work?
+
+### Multiple workflows, tuned for different circumstances
+
+`MAFFT` can be used as a "black box" alignment tool, but it offers several ways to combine its components. The various combinations can be chosen to suit your alignment task or available hardware, and fall into three main categories:
+
+#### `FFT-NS1`, `FFT-NS-2`: progressive methods for large sequence sets
+
+These approaches are simple progressive alignment workflows that take advantage of 6-tuple scoring to speed up initial distance matrix construction, and FFTs to speed up sequence and sequence group alignment.
+
+1. A guide tree is constructed from 6-tuple similarity scores
+2. A progressive alignment is performed on the guide tree (and the output alignment returned - `FFT-NS-1`)
+3. The guide tree is reconstructed from this alignment (`FFT-NS-2`)
+4. The sequences are realigned against the rebuilt guide tree (and the output alignment returned - `FFT-NS-2`)
+
+`FFT-NS-2` is the default `MAFFT` algorithm, chosen to balance speed and accuracy [@Katoh2008-hj].
+
+#### `FFT-NS-i`: progressive method for more accurate alignments of smaller sequence sets
+
+This approach resembles that for `FFT-NS-2`, but iterates over guide tree reconstruction and sequence realignment until either no improvement can be detected in the alignment (by _Weighted Sum of Pairs_, WSP), or a maximum number of iterations is reached.
+
+1. A guide tree is constructed from 6-tuple similarity scores
+2. A progressive alignment is performed on the guide tree
+3. The guide tree is reconstructed from this alignment
+4. The sequences are realigned against the rebuilt guide tree
+5. Steps 3 and 4 are repeated until there is no improvement in the alignment's WSP score, or a maximum number of iterations is reached
+
+#### `L-INS-i`, `E-INS-i`, and `G-INS-i`: consistency scores for difficult alignment cases
+
+These approaches resemble `FT-NS-i` in that they iterate over guide tree construction and realignment, but differ in that they carry out all-vs-all pairwise alignment initially, rather than the 6-tuple approximation, and employ a `COFFEE`-like _consistency score_ alongside the WSP score, and different alignment algorithms during pairwise alignment.
+
+- `E-INS-i` uses a global Needleman-Wunsch approach to pairwise alignment, and is suited for alignments between sequences that may have several alignable domains and a high proportion of non-alignable insertions.
+- `L-INS-i` uses a local Smith-Waterman alignment to improve alignments where there is a single alignable domain, with non-alignable flanking sequence.
+- `G-INS-i` uses a global Needleman-Wunsch alignment approach, and is suited to situations where it can be assumed that the entire sequence can be aligned for all inputs.
+
+
+### Pairwise sequence, or sequence group alignment
+
+#### Fast Fourier Transform speed-up
+
+`MAFFT` improves on the speed of simpler progressive alignment approaches [@Feng1987-lz] by using efficient algorithms to target slow steps in the process. The main advance, which gives `MAFFT` its name, was to use the [fast Fourier Transform (FFT)](https://en.wikipedia.org/wiki/Fast_Fourier_transform) - an algorithm that converts a signal from one quantitative _domain_, such as time, to a representation in the _frequency domain_ - to speed up alignment of protein sequences.
+
+A key insight was to note that the frequency of amino acid substitutions is often determined by whether the substituting residue conserves important physicochemical properties [@Katoh2002-nz]. Conservation of such properties is a feature of _neutral_ or _near-neutral_ substitutions. In the original paper, each amino acid ($a$) was assigned to a vector of two values, one representing the amino acid residue's volume ($v(a)$), and one representing its polarity ($p(a)$), normalised to zero mean and unit variance over all amino acids.
+
+By converting the amino acid sequences to be aligned to a sequence of these vectors, `MAFFT` calculates the _correlation_ between sequences in terms of their polarity and volume components. In doing this, `MAFFT` considers a _positional lag_ of $k$ sites in the sequence - a parameter controlling the size of sequence region being considered, and the overall correlation is reported for this value, as $c(k)$. By using a fast Fourier Transform for this operation, the CPU time for a set of $N$ input sequences is reduced from $O(N^2)$ to $O(N log N)$.
+
+This concept can be extended from an alignment between two sequences to an alignment between two already-aligned groups of sequences, by replacing the vector of volume (or polarity) values for a single sequence with a vector that is the linear combination of the volume components for the aligned group [@Katoh2002-nz].
+
+#### Finding homologous sequence segments
+
+If a pair of sequences has homologous regions - conserving polarity and volume - then there will be a corresponding peak in the graph of $c(k)$. This identifies the _positional lag_ of the match, but not its location. So, to determine the actual location of the match, a _sliding window analysis_ (window size 30) is carried out to identify local homologies for the 20 highest peaks in $c(k)$. A score threshold of 0.7 per site is applied, and any window with a higher value is considered a _homologous segment_. Successive segments identified as _homologous segments_ are combined, to a maximum of 150 sites per homolgous segment. Segments longer than this are divided into segments of maximum length 150 [@Katoh2002-nz].
+
+#### Aligning sequence pairs
+
+A matrix of homologous segments between two sequences is constructed, and the alignment obtained by the standard [_dynamic programming_](https://en.wikipedia.org/wiki/Dynamic_programming) procedure [@Katoh2002-nz].
+
+#### Application to nucleotide sequences
+
+For nucleotide sequences, rather than using vectors that represent amino acid side chain properties, four-dimensional vectors of A, C, G, T are used at each column. Otherwise the process is identical [@Katoh2002-nz].
+
+### Scoring scheme
+
+`MAFFT` departs from the common approach of using an all-positive-value scoring matrix, instead adopting a normalised similarity matrix. By default, this was originally derived from a 200 PAM log-odds matrix for both protein and nucleotide alignments, and a simplified gap penalty scheme was also employed [@Katoh2002-nz]. More recently, the 200 PAM matrix has been replaced as default by BLOSUM62, and the gap penalty scheme was heavily revised [@Katoh2008-hj]. 
+
+### Guide tree building
+
+The modified UPGMA tree building method used in the original version of `MAFFT` did not scale well to very large sequence sets, and was replaced in v6 onwards by the PartTree algorithm [@Katoh2008-hj; @Katoh2008-if]. This constructs an approximate tree from unaligned sequences by partitioning the dataset and is $O(N log N)$ rather than $O(N^2)$, like UPGMA.
+
+### RNA and protein alignment incorporating structural information
+
+In `MAFFT` v6, options were introduced to include structural information when aligning RNA sequences. This takes base pairing probability into account, and applies a novel four-way alignment consistency function [@Katoh2008-hj].
+
+`MAFFT` v7 introduced the ability to inform an alignment by using the `ASH` structural alignment program and, in particular, the inter-residue distance between alpha carbons for amino acids in the alignment. This is likely to be most useful when aligning sequence-diverse, but structurally similar, proteins [@Katoh2013-jm].
+
+`MAFFT` has been integrated with the `DASH` structural alignment database, to use structural alignment information as a set of constraints on sequence alignment. This integration is available through the [official `MAFFT` alignment server](https://mafft.cbrc.jp/alignment/server/) [@Rozewicki2019-vj].
+
+### Extension of existing alignments with new sequences
+
+Further improvements were introduced in `MAFFT` v7 to enable addition of unaligned sequences into an existing multiple sequence alignment [@Katoh2013-jm]. 
+
+### Parallelisation
+
+Threading was added to `MAFFT` v7. Progressive alignment method outputs are identical in non-threaded and threaded runs, but iterative refinement-based alignments may generate different output when threaded [@Katoh2013-jm].
+
+## Where can I find out more about `MAFFT`?
+
+- [`MAFFT` v7 tips](https://mafft.cbrc.jp/alignment/software/tips0.html)
+- [`MAFFT` v7 algorithm](https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html)
