@@ -1,2 +1,7 @@
 # MAFFT {#sec-mafft .unnumbered}
 
+MAFFT is a very fast consistency-based iterative multiple sequence alignment method, suitable for aligning large sequence sets.
+
+MAFFT stands for Multiple Alignment using Fast Fourier Transform, and was first described in 2002 [@Katoh2002-nz]. Since then it has received multiple enhancements and extensions to improve scalability to larger sequence sets, and integration of other data such as protein structures [Katoh2008-hj; @Katoh2013-jm; @Rozewicki2019-vj; @Katoh2019-et].
+
+## How does MAFFT work?
