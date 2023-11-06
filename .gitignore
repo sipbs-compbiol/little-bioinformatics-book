@@ -7,3 +7,6 @@
 # macOS files can be ignored
 .DS_Store
 /.quarto/
+
+# don't upload locally-compiled book
+_book/
