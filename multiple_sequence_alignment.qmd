@@ -1,0 +1,3 @@
+# Multiple Sequence Alignment {#sec-multiple-sequence-alignment .unnumbered}
+
+This section of the book will introduce the concepts, algorithms, and application of multiple sequence alignment.
