@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leighton Pritchard">
-<meta name="dcterms.date" content="2023-01-01">
 
-<title>A Little Book of Bioinformatics</title>
+<title>A Little Book of Bioinformatics - Multiple Sequence Alignment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./mafft.html" rel="next">
+<link href="./summary.html" rel="prev">
 <link href="./assets/images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface to <em>A Little Book of Bioinformatics</em></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./multiple_sequence_alignment.html">Multiple Sequence Alignment</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface to <em>A Little Book of Bioinformatics</em></span></a>
   </div>
 </li>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./multiple_sequence_alignment.html" class="sidebar-item-text sidebar-link">
+            <a href="./multiple_sequence_alignment.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Multiple Sequence Alignment</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -156,39 +156,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface-to-a-little-book-of-bioinformatics" id="toc-preface-to-a-little-book-of-bioinformatics" class="nav-link active" data-scroll-target="#preface-to-a-little-book-of-bioinformatics">Preface to <em>A Little Book of Bioinformatics</em></a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A Little Book of Bioinformatics</h1>
+<h1 class="title"><span id="sec-multiple-sequence-alignment" class="quarto-section-identifier">Multiple Sequence Alignment</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Leighton Pritchard </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -196,15 +178,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<section id="preface-to-a-little-book-of-bioinformatics" class="level1 unnumbered">
-<h1 class="unnumbered">Preface to <em>A Little Book of Bioinformatics</em></h1><p><img src="assets/images/cover.png" title="A Little Book of Bioinformatics" class="quarto-cover-image img-fluid"></p>
-<p>Welcome to <em>A Little Book of Bioinformatics</em>. This is an online book, under continual development, which I am building as and when topics come to mind or prominence.</p>
-<p>My goal is that this online book will come to be a fairly transparent and honest reference for students in bioinformatics, and maybe for some researchers, too.</p>
-<p>I would be very grateful for feedback <a href="leighton.pritchard@strath.ac.uk">by email</a> or through the <a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new">GitHub repository Issues page</a></p>
+<p>This section of the book will introduce the concepts, algorithms, and application of multiple sequence alignment.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -442,10 +418,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./summary.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./mafft.html" class="pagination-link">
+        <span class="nav-page-text"><code>MAFFT</code></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -455,7 +434,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">This book was written by Leighton Pritchard.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/multiple_sequence_alignment.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.<br>
 </div>
   </div>
