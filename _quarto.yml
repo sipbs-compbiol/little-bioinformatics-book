@@ -15,7 +15,7 @@ book:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.  
   
-  repo-url: https://github.com/sipbs-compbiol/little-bioinformatics-book/
+  repo-url: https://github.com/sipbs-compbiol/little-bioinformatics-book
   repo-branch: main
   repo-actions: [edit, issue]
   
