@@ -38,6 +38,10 @@ book:
     
     - part: biological_networks.qmd
     
+    - part: biological_structures.qmd
+    
+    - part: signatures_of_evolution.qmd
+    
     - references.qmd
 
 bibliography: references.bib
