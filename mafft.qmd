@@ -1,4 +1,4 @@
-# `MAFFT` {#sec-MAFFT .unnumbered}
+# `MAFFT` {#sec-MAFFT .numbered}
 
 `MAFFT` is a very fast progressive alignment method, suitable for aligning large sequence sets, and tuneable for a range of input circumstances.
 

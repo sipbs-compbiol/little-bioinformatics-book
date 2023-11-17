@@ -1,4 +1,4 @@
-# `ChimeraX` {#sec-ChimeraX .unnumbered}
+# `ChimeraX` {#sec-ChimeraX .numbered}
 
 `ChimeraX` is a widely-used, open source software package for macromolecular visualisation and analysis. It is free for academic, government, nonprofit, and personal users.
 

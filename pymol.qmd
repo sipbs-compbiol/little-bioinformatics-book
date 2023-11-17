@@ -1,4 +1,4 @@
-# `PyMOL` {#sec-PyMOL .unnumbered}
+# `PyMOL` {#sec-PyMOL .numbered}
 
 `PyMOL` is a widely-used, open source molecular visualisation package, with paid-for ("incentive") support and updates.
 
@@ -105,7 +105,9 @@ This removes the water molecules from our visualisation (@fig-pymol_hide_waters)
 
 It is possible to select parts of the structure in `PyMOL` by pointing and clicking using the mouse. For complicated selections especially, this can be difficult, tedious, and error-prone. It is usually better to use the **interactive command window** to select structural components explicitly.
 
-For example, to select only the first chain of the trimeric PduB structure (chain A), we would execute the command `indicate chain A`, which highlights that chain in the main visualisation window (@fig-pymol_chain_highlight).
+#### Selecting with `indicate`
+
+Wo select only the first chain of the trimeric PduB structure (chain A), we could execute the command `indicate chain A`, which highlights that chain in the main visualisation window, to show that it is selected (@fig-pymol_chain_highlight).
 
 ::: {callout-note}
 See that using `indicate` has produced a new row in the **object control panel** called `(indicate)`. This allows us to control the appearance of the selected element.
@@ -117,8 +119,21 @@ With the chain selected, we can then change the way it is drawn using the `S`/Sh
 
 ![Rendering `4I61` chain A structure as spheres.](assets/images/pymol/07-pymol_show_spheres.png){#fig-pymol_show_spheres width=75%}
 
-![Rendering `4I61` chain A structure with atom colouring.](assets/images/pymol/08-pymol_colour_spheres.png){#fig-pymol_colour_spheres width=75%}
-
 ::: {.callout-important}
 Click on the `(indicate)` label in the object control panel to cancel the selection.
 :::
+
+
+![Rendering `4I61` chain A structure with atom colouring.](assets/images/pymol/08-pymol_colour_spheres.png){#fig-pymol_colour_spheres width=75%}
+
+#### Selecting specific residues with the sequence viewer
+
+Below the mouse action legend on the right hand side of the window there is a set of control buttons. To the right of this list is a button labelled with the letter `S`. Clicking this button brings up the sequence viewer/selector at the top of the main image visualisation window (@fig-pymol_seq_selector).
+
+![Activating the sequence selector.](assets/images/pymol/09-pymol_seq_selector.png){#fig-pymol_seq_selector width=75%}
+
+The scroll bar below the sequence allows you to find any part of the protein sequence (and additional molecules in the structure). The symbols are coloured to match the current structural representation, to aid with locating specific residues. For instance, in @fig-selecting_residues the residues for chain `B` are coloured in cyan. Residues can be selected by clicking and dragging within the displayed sequence, and the current selection is highlighted as `(sele)` in the object control panel. We can also select discontinuous sections of the structure, as in @fig-pymol_discontinuous_selection.
+
+![Selecting chain residues in `PyMOL` using the sequence viewer/selector](assets/images/pymol/10-pymol_selecting_residues.png){#fig-pymol_selecting_residues width=75%}
+
+![Selecting discontinuous residues in `PyMOL` using the sequence viewer/selector](assets/images/pymol/11-pymol_discontinuous_selection.png){#fig-pymol_discontinuous_selection width=75%}
