@@ -1,0 +1,124 @@
+# `PyMOL` {#sec-PyMOL .unnumbered}
+
+`PyMOL` is a widely-used, open source molecular visualisation package, with paid-for ("incentive") support and updates.
+
+## Where can I download `PyMOL`?
+
+The official home of `PyMOL` is at Schrodinger Software, where you can download the "Incentive" version. This requires a licence, which is free for educational use, but not free for academic/commercial/research use.
+
+- [https://pymol.org/2/](https://pymol.org/2/)
+
+There is an open-source, freely-licensed version of `PyMOL`, also provided by Schrodinger Software. This can be downloaded from `GitHub` and self-compiled, or obtained through `homebrew`:
+
+- [https://github.com/schrodinger/pymol-open-source](https://github.com/schrodinger/pymol-open-source)
+- [https://formulae.brew.sh/formula/pymol](https://formulae.brew.sh/formula/pymol)
+
+## Using `PyMOL`
+
+Start the program from the application icon, or from the command-line (depending on which version you have installed), to obtain the landing screen (@fig-pymol_landing).
+
+![`PyMOL` landing screen, for the Open Source version, on macOS.](assets/images/pymol/01-pymol_landing.png){#fig-pymol_landing width=75%}
+
+### `PyMOL` layout
+
+Pymol is laid out approximately into four quadrants. Clockwise from top left in @fig-pymol_landing we have:
+
+- The **interactive command window**. At the bottom of this window is the command prompt `PyMOL >`, where commands to control the visualisation can be typed and executed.
+- The next quadrant (top right) contains a set of **function buttons** providing a range of actions for control of the visualisation.
+- Below this is the **object control panel**, which is the main point-and-click interface for changing the way that molecules in the visualisation window appear, and below this is the mouse control legend to explain what your mouse/trackpad actions will achieve.
+- Finally, at bottom left, we have the **main viewer window**, where your molecule will be shown.
+
+## Obtaining structures
+
+`PyMOL` can connect directly to [RCSB/PDB](https://www.rcsb.org/) to download structural data, and can load structure files from your local storage.
+
+#### `fetch`ing structures from RCSB/PDB
+
+We will download a structure directly from [RCSB/PDB](https://www.rcsb.org/). To do this we will use the **interactive command window**. We also need to know the RCSB/PDB accession for the structure we want to view. Here, we will use the structure [`4I61`](https://www.rcsb.org/structure/4I61), a trimer of PduB, a bacterial microcompartment protein.
+
+::: {.callout-note collapse="true"}
+## PduB makes biochemical factories inside cells.
+
+[PduB](https://www.uniprot.org/uniprotkb/F8DQ39/entry) is a protein that trimerises to form a structural unit that then combines with other similar structural units to enclose a volume within bacterial cells, to make a kind of "factory" for chemical reactions.
+
+The UniProt entry for the protein corresponding to this structure is [F8DQ39](https://www.uniprot.org/uniprotkb/F8DQ39/entry)
+:::
+
+To `fetch` this structure from RCSB/PDB, we enter the command `fetch 4I61` into the command prompt, and hit `Return` (@fig-pymol_fetch_cmd).
+
+![`PyMOL` command prompt including `fetch` command.](assets/images/pymol/02-pymol_fetch.png){#fig-pymol_fetch_cmd width=75%}
+
+Executing this command will produce a short report to the interactive command window, and show a rendering of the structure in the **main viewer window** (@fig-pymol_fetch_load).
+
+![Initial render of `4I61` PduB structure in `PyMOL`.](assets/images/pymol/03-pymol_fetch_load.png){#fig-pymol_fetch_load width=75%}
+
+::: {.callout-tip collapse="true"}
+## `PyMOL` downloads the fetched file.
+
+When executed, this command will also download the file `4I61.cif` to the current working directory. You can load this file into `PyMOL` without requiring a live network connection.
+:::
+
+## Changing the appearance of the structure
+
+### Rotating the molecule
+
+By default, left-clicking on the molecule in the main viewer window and moving your mouse will rotate the molecule. You can use this to obtain a viewing position that helps you understand the structure better or that, when saved as a figure, will communicate your message to a reader.
+
+### Changing molecule colours
+
+The **object control panel** provides buttons (`A`, `S`, `H`, `L`, `C`) that control aspects of the molecule's appearance:
+
+- `A`/Action
+- `S`/Show
+- `H`/Hide
+- `L`/Label
+- `C`/Colour
+
+There are three distinct protein chains in this trimeric structure. We will colour the protein differently by chain so that we can see them more clearly.
+
+::: {.callout-important}
+- Click on the `C` button for `4I61` in the **object control panel**
+- Click on `by chain` in the menu that appears
+- Click on `by chain` in the new menu
+:::
+
+This colours each chain in the structure differently, and also the water molecules (small dots) associated with each chain  (@fig-pymol_by_chain).
+
+![`PyMOL` rendering of `4I61` with a different colour for each chain.](assets/images/pymol/04-pymol_by_chain.png){#fig-pymol_by_chain width=75%}
+
+### Hiding elements of the structure
+
+We sometimes want to focus attention on particular parts of a structure. To aid in this we can _hide_ parts of the visualisation, using the `H`/Hide menu in the object control panel.
+
+For example, to hide the water molecules that surround each chain, we would:
+
+::: {.callout-important}
+- Click on the `H` button for `4I61` in the object control panel
+- Click on `waters`
+:::
+
+This removes the water molecules from our visualisation (@fig-pymol_hide_waters).
+
+![`4I61` structure with waters removed.](assets/images/pymol/05-pymol_hide_waters.png){#fig-pymol_hide_waters width=75%}
+
+### Selecting part of the structure
+
+It is possible to select parts of the structure in `PyMOL` by pointing and clicking using the mouse. For complicated selections especially, this can be difficult, tedious, and error-prone. It is usually better to use the **interactive command window** to select structural components explicitly.
+
+For example, to select only the first chain of the trimeric PduB structure (chain A), we would execute the command `indicate chain A`, which highlights that chain in the main visualisation window (@fig-pymol_chain_highlight).
+
+::: {callout-note}
+See that using `indicate` has produced a new row in the **object control panel** called `(indicate)`. This allows us to control the appearance of the selected element.
+:::
+
+![`4I61` structure with chain A highlighted.](assets/images/pymol/06-pymol_chain_highlight.png){#fig-pymol_chain_highlight width=75%}
+
+With the chain selected, we can then change the way it is drawn using the `S`/Show menu for the `(indicate)` selection, and the colours used for rendering, using the corresponding `C`/Colour menu (@fig-pymol_show_spheres, @fig-pymol_colour_spheres).
+
+![Rendering `4I61` chain A structure as spheres.](assets/images/pymol/07-pymol_show_spheres.png){#fig-pymol_show_spheres width=75%}
+
+![Rendering `4I61` chain A structure with atom colouring.](assets/images/pymol/08-pymol_colour_spheres.png){#fig-pymol_colour_spheres width=75%}
+
+::: {.callout-important}
+Click on the `(indicate)` label in the object control panel to cancel the selection.
+:::

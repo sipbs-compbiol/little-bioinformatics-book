@@ -39,6 +39,9 @@ book:
     - part: biological_networks.qmd
     
     - part: biological_structures.qmd
+      chapters: 
+        - pymol.qmd
+        - chimerax.qmd
     
     - part: signatures_of_evolution.qmd
     
