@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>A Little Book of Bioinformatics - Biological Structures</title>
+<title>A Little Book of Bioinformatics - PyMOL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pymol.html" rel="next">
-<link href="./biological_networks.html" rel="prev">
+<link href="./chimerax.html" rel="next">
+<link href="./biological_structures.html" rel="prev">
 <link href="./assets/images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./biological_structures.html">Biological Structures</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./biological_structures.html">Biological Structures</a></li><li class="breadcrumb-item"><a href="./pymol.html"><code>PyMOL</code></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./biological_structures.html" class="sidebar-item-text sidebar-link active">
+            <a href="./biological_structures.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Biological Structures</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pymol.html" class="sidebar-item-text sidebar-link">
+  <a href="./pymol.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><code>PyMOL</code></span></a>
   </div>
 </li>
@@ -199,14 +199,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#where-can-i-download-pymol" id="toc-where-can-i-download-pymol" class="nav-link active" data-scroll-target="#where-can-i-download-pymol">Where can I download <code>PyMOL</code>?</a></li>
+  <li><a href="#using-pymol" id="toc-using-pymol" class="nav-link" data-scroll-target="#using-pymol">Using <code>PyMOL</code></a>
+  <ul class="collapse">
+  <li><a href="#pymol-layout" id="toc-pymol-layout" class="nav-link" data-scroll-target="#pymol-layout"><code>PyMOL</code> layout</a></li>
+  </ul></li>
+  <li><a href="#obtaining-structures" id="toc-obtaining-structures" class="nav-link" data-scroll-target="#obtaining-structures">Obtaining structures</a></li>
+  <li><a href="#changing-the-appearance-of-the-structure" id="toc-changing-the-appearance-of-the-structure" class="nav-link" data-scroll-target="#changing-the-appearance-of-the-structure">Changing the appearance of the structure</a>
+  <ul class="collapse">
+  <li><a href="#rotating-the-molecule" id="toc-rotating-the-molecule" class="nav-link" data-scroll-target="#rotating-the-molecule">Rotating the molecule</a></li>
+  <li><a href="#changing-molecule-colours" id="toc-changing-molecule-colours" class="nav-link" data-scroll-target="#changing-molecule-colours">Changing molecule colours</a></li>
+  <li><a href="#hiding-elements-of-the-structure" id="toc-hiding-elements-of-the-structure" class="nav-link" data-scroll-target="#hiding-elements-of-the-structure">Hiding elements of the structure</a></li>
+  <li><a href="#selecting-part-of-the-structure" id="toc-selecting-part-of-the-structure" class="nav-link" data-scroll-target="#selecting-part-of-the-structure">Selecting part of the structure</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/pymol.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-biological-structures" class="quarto-section-identifier">Biological Structures</span></h1>
+<h1 class="title"><span id="sec-PyMOL" class="quarto-section-identifier"><code>PyMOL</code></span></h1>
 </div>
 
 
@@ -221,9 +239,198 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This section of the book will introduce structural data and visualisation.</p>
+<p><code>PyMOL</code> is a widely-used, open source molecular visualisation package, with paid-for (“incentive”) support and updates.</p>
+<section id="where-can-i-download-pymol" class="level2">
+<h2 class="anchored" data-anchor-id="where-can-i-download-pymol">Where can I download <code>PyMOL</code>?</h2>
+<p>The official home of <code>PyMOL</code> is at Schrodinger Software, where you can download the “Incentive” version. This requires a licence, which is free for educational use, but not free for academic/commercial/research use.</p>
+<ul>
+<li><a href="https://pymol.org/2/">https://pymol.org/2/</a></li>
+</ul>
+<p>There is an open-source, freely-licensed version of <code>PyMOL</code>, also provided by Schrodinger Software. This can be downloaded from <code>GitHub</code> and self-compiled, or obtained through <code>homebrew</code>:</p>
+<ul>
+<li><a href="https://github.com/schrodinger/pymol-open-source">https://github.com/schrodinger/pymol-open-source</a></li>
+<li><a href="https://formulae.brew.sh/formula/pymol">https://formulae.brew.sh/formula/pymol</a></li>
+</ul>
+</section>
+<section id="using-pymol" class="level2">
+<h2 class="anchored" data-anchor-id="using-pymol">Using <code>PyMOL</code></h2>
+<p>Start the program from the application icon, or from the command-line (depending on which version you have installed), to obtain the landing screen (<a href="#fig-pymol_landing">Figure&nbsp;<span>1</span></a>).</p>
+<div id="fig-pymol_landing" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/01-pymol_landing.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: <code>PyMOL</code> landing screen, for the Open Source version, on macOS.</figcaption>
+</figure>
+</div>
+<section id="pymol-layout" class="level3">
+<h3 class="anchored" data-anchor-id="pymol-layout"><code>PyMOL</code> layout</h3>
+<p>Pymol is laid out approximately into four quadrants. Clockwise from top left in <a href="#fig-pymol_landing">Figure&nbsp;<span>1</span></a> we have:</p>
+<ul>
+<li>The <strong>interactive command window</strong>. At the bottom of this window is the command prompt <code>PyMOL &gt;</code>, where commands to control the visualisation can be typed and executed.</li>
+<li>The next quadrant (top right) contains a set of <strong>function buttons</strong> providing a range of actions for control of the visualisation.</li>
+<li>Below this is the <strong>object control panel</strong>, which is the main point-and-click interface for changing the way that molecules in the visualisation window appear, and below this is the mouse control legend to explain what your mouse/trackpad actions will achieve.</li>
+<li>Finally, at bottom left, we have the <strong>main viewer window</strong>, where your molecule will be shown.</li>
+</ul>
+</section>
+</section>
+<section id="obtaining-structures" class="level2">
+<h2 class="anchored" data-anchor-id="obtaining-structures">Obtaining structures</h2>
+<p><code>PyMOL</code> can connect directly to <a href="https://www.rcsb.org/">RCSB/PDB</a> to download structural data, and can load structure files from your local storage.</p>
+<section id="fetching-structures-from-rcsbpdb" class="level4">
+<h4 class="anchored" data-anchor-id="fetching-structures-from-rcsbpdb"><code>fetch</code>ing structures from RCSB/PDB</h4>
+<p>We will download a structure directly from <a href="https://www.rcsb.org/">RCSB/PDB</a>. To do this we will use the <strong>interactive command window</strong>. We also need to know the RCSB/PDB accession for the structure we want to view. Here, we will use the structure <a href="https://www.rcsb.org/structure/4I61"><code>4I61</code></a>, a trimer of PduB, a bacterial microcompartment protein.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+PduB makes biochemical factories inside cells.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.uniprot.org/uniprotkb/F8DQ39/entry">PduB</a> is a protein that trimerises to form a structural unit that then combines with other similar structural units to enclose a volume within bacterial cells, to make a kind of “factory” for chemical reactions.</p>
+<p>The UniProt entry for the protein corresponding to this structure is <a href="https://www.uniprot.org/uniprotkb/F8DQ39/entry">F8DQ39</a></p>
+</div>
+</div>
+</div>
+<p>To <code>fetch</code> this structure from RCSB/PDB, we enter the command <code>fetch 4I61</code> into the command prompt, and hit <code>Return</code> (<a href="#fig-pymol_fetch_cmd">Figure&nbsp;<span>2</span></a>).</p>
+<div id="fig-pymol_fetch_cmd" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/02-pymol_fetch.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: <code>PyMOL</code> command prompt including <code>fetch</code> command.</figcaption>
+</figure>
+</div>
+<p>Executing this command will produce a short report to the interactive command window, and show a rendering of the structure in the <strong>main viewer window</strong> (<a href="#fig-pymol_fetch_load">Figure&nbsp;<span>3</span></a>).</p>
+<div id="fig-pymol_fetch_load" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/03-pymol_fetch_load.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Initial render of <code>4I61</code> PduB structure in <code>PyMOL</code>.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<code>PyMOL</code> downloads the fetched file.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When executed, this command will also download the file <code>4I61.cif</code> to the current working directory. You can load this file into <code>PyMOL</code> without requiring a live network connection.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="changing-the-appearance-of-the-structure" class="level2">
+<h2 class="anchored" data-anchor-id="changing-the-appearance-of-the-structure">Changing the appearance of the structure</h2>
+<section id="rotating-the-molecule" class="level3">
+<h3 class="anchored" data-anchor-id="rotating-the-molecule">Rotating the molecule</h3>
+<p>By default, left-clicking on the molecule in the main viewer window and moving your mouse will rotate the molecule. You can use this to obtain a viewing position that helps you understand the structure better or that, when saved as a figure, will communicate your message to a reader.</p>
+</section>
+<section id="changing-molecule-colours" class="level3">
+<h3 class="anchored" data-anchor-id="changing-molecule-colours">Changing molecule colours</h3>
+<p>The <strong>object control panel</strong> provides buttons (<code>A</code>, <code>S</code>, <code>H</code>, <code>L</code>, <code>C</code>) that control aspects of the molecule’s appearance:</p>
+<ul>
+<li><code>A</code>/Action</li>
+<li><code>S</code>/Show</li>
+<li><code>H</code>/Hide</li>
+<li><code>L</code>/Label</li>
+<li><code>C</code>/Colour</li>
+</ul>
+<p>There are three distinct protein chains in this trimeric structure. We will colour the protein differently by chain so that we can see them more clearly.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>Click on the <code>C</code> button for <code>4I61</code> in the <strong>object control panel</strong></li>
+<li>Click on <code>by chain</code> in the menu that appears</li>
+<li>Click on <code>by chain</code> in the new menu</li>
+</ul>
+</div>
+</div>
+</div>
+<p>This colours each chain in the structure differently, and also the water molecules (small dots) associated with each chain (<a href="#fig-pymol_by_chain">Figure&nbsp;<span>4</span></a>).</p>
+<div id="fig-pymol_by_chain" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/04-pymol_by_chain.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: <code>PyMOL</code> rendering of <code>4I61</code> with a different colour for each chain.</figcaption>
+</figure>
+</div>
+</section>
+<section id="hiding-elements-of-the-structure" class="level3">
+<h3 class="anchored" data-anchor-id="hiding-elements-of-the-structure">Hiding elements of the structure</h3>
+<p>We sometimes want to focus attention on particular parts of a structure. To aid in this we can <em>hide</em> parts of the visualisation, using the <code>H</code>/Hide menu in the object control panel.</p>
+<p>For example, to hide the water molecules that surround each chain, we would:</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>Click on the <code>H</code> button for <code>4I61</code> in the object control panel</li>
+<li>Click on <code>waters</code></li>
+</ul>
+</div>
+</div>
+</div>
+<p>This removes the water molecules from our visualisation (<a href="#fig-pymol_hide_waters">Figure&nbsp;<span>5</span></a>).</p>
+<div id="fig-pymol_hide_waters" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/05-pymol_hide_waters.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: <code>4I61</code> structure with waters removed.</figcaption>
+</figure>
+</div>
+</section>
+<section id="selecting-part-of-the-structure" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-part-of-the-structure">Selecting part of the structure</h3>
+<p>It is possible to select parts of the structure in <code>PyMOL</code> by pointing and clicking using the mouse. For complicated selections especially, this can be difficult, tedious, and error-prone. It is usually better to use the <strong>interactive command window</strong> to select structural components explicitly.</p>
+<p>For example, to select only the first chain of the trimeric PduB structure (chain A), we would execute the command <code>indicate chain A</code>, which highlights that chain in the main visualisation window (<a href="#fig-pymol_chain_highlight">Figure&nbsp;<span>6</span></a>).</p>
+<div class="{callout-note}">
+<p>See that using <code>indicate</code> has produced a new row in the <strong>object control panel</strong> called <code>(indicate)</code>. This allows us to control the appearance of the selected element.</p>
+</div>
+<div id="fig-pymol_chain_highlight" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/06-pymol_chain_highlight.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: <code>4I61</code> structure with chain A highlighted.</figcaption>
+</figure>
+</div>
+<p>With the chain selected, we can then change the way it is drawn using the <code>S</code>/Show menu for the <code>(indicate)</code> selection, and the colours used for rendering, using the corresponding <code>C</code>/Colour menu (<a href="#fig-pymol_show_spheres">Figure&nbsp;<span>7</span></a>, <a href="#fig-pymol_colour_spheres">Figure&nbsp;<span>8</span></a>).</p>
+<div id="fig-pymol_show_spheres" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/07-pymol_show_spheres.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Rendering <code>4I61</code> chain A structure as spheres.</figcaption>
+</figure>
+</div>
+<div id="fig-pymol_colour_spheres" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/pymol/08-pymol_colour_spheres.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: Rendering <code>4I61</code> chain A structure with atom colouring.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Click on the <code>(indicate)</code> label in the object control panel to cancel the selection.</p>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -461,13 +668,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./biological_networks.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Biological Networks</span>
+      <a href="./biological_structures.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Biological Structures</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pymol.html" class="pagination-link">
-        <span class="nav-page-text"><code>PyMOL</code></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chimerax.html" class="pagination-link">
+        <span class="nav-page-text"><code>ChimeraX</code></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -477,7 +684,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">This book was written by Leighton Pritchard.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/biological_structures.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.<br>
 </div>
   </div>
