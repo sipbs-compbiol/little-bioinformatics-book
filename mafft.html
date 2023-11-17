@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>A Little Book of Bioinformatics - MAFFT</title>
+<title>A Little Book of Bioinformatics - 3&nbsp; MAFFT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./multiple_sequence_alignment.html">Multiple Sequence Alignment</a></li><li class="breadcrumb-item"><a href="./mafft.html"><code>MAFFT</code></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./multiple_sequence_alignment.html">Multiple Sequence Alignment</a></li><li class="breadcrumb-item"><a href="./mafft.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">`MAFFT`</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -172,7 +172,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mafft.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><code>MAFFT</code></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>MAFFT</code></span></span></a>
   </div>
 </li>
       </ul>
@@ -193,13 +193,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./pymol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>PyMOL</code></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><code>PyMOL</code></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chimerax.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>ChimeraX</code></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><code>ChimeraX</code></span></span></a>
   </div>
 </li>
       </ul>
@@ -224,19 +224,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#where-can-i-download-mafft" id="toc-where-can-i-download-mafft" class="nav-link active" data-scroll-target="#where-can-i-download-mafft">Where can I download <code>MAFFT</code>?</a></li>
-  <li><a href="#where-can-i-use-mafft-in-a-browser" id="toc-where-can-i-use-mafft-in-a-browser" class="nav-link" data-scroll-target="#where-can-i-use-mafft-in-a-browser">Where can I use <code>MAFFT</code> in a browser?</a></li>
-  <li><a href="#how-does-mafft-work" id="toc-how-does-mafft-work" class="nav-link" data-scroll-target="#how-does-mafft-work">How does <code>MAFFT</code> work?</a>
+  <li><a href="#where-can-i-download-mafft" id="toc-where-can-i-download-mafft" class="nav-link active" data-scroll-target="#where-can-i-download-mafft"><span class="header-section-number">3.1</span> Where can I download <code>MAFFT</code>?</a></li>
+  <li><a href="#where-can-i-use-mafft-in-a-browser" id="toc-where-can-i-use-mafft-in-a-browser" class="nav-link" data-scroll-target="#where-can-i-use-mafft-in-a-browser"><span class="header-section-number">3.2</span> Where can I use <code>MAFFT</code> in a browser?</a></li>
+  <li><a href="#how-does-mafft-work" id="toc-how-does-mafft-work" class="nav-link" data-scroll-target="#how-does-mafft-work"><span class="header-section-number">3.3</span> How does <code>MAFFT</code> work?</a>
   <ul class="collapse">
-  <li><a href="#multiple-workflows-tuned-for-different-circumstances" id="toc-multiple-workflows-tuned-for-different-circumstances" class="nav-link" data-scroll-target="#multiple-workflows-tuned-for-different-circumstances">Multiple workflows, tuned for different circumstances</a></li>
-  <li><a href="#pairwise-sequence-or-sequence-group-alignment" id="toc-pairwise-sequence-or-sequence-group-alignment" class="nav-link" data-scroll-target="#pairwise-sequence-or-sequence-group-alignment">Pairwise sequence, or sequence group alignment</a></li>
-  <li><a href="#scoring-scheme" id="toc-scoring-scheme" class="nav-link" data-scroll-target="#scoring-scheme">Scoring scheme</a></li>
-  <li><a href="#guide-tree-building" id="toc-guide-tree-building" class="nav-link" data-scroll-target="#guide-tree-building">Guide tree building</a></li>
-  <li><a href="#rna-and-protein-alignment-incorporating-structural-information" id="toc-rna-and-protein-alignment-incorporating-structural-information" class="nav-link" data-scroll-target="#rna-and-protein-alignment-incorporating-structural-information">RNA and protein alignment incorporating structural information</a></li>
-  <li><a href="#extension-of-existing-alignments-with-new-sequences" id="toc-extension-of-existing-alignments-with-new-sequences" class="nav-link" data-scroll-target="#extension-of-existing-alignments-with-new-sequences">Extension of existing alignments with new sequences</a></li>
-  <li><a href="#parallelisation" id="toc-parallelisation" class="nav-link" data-scroll-target="#parallelisation">Parallelisation</a></li>
+  <li><a href="#multiple-workflows-tuned-for-different-circumstances" id="toc-multiple-workflows-tuned-for-different-circumstances" class="nav-link" data-scroll-target="#multiple-workflows-tuned-for-different-circumstances"><span class="header-section-number">3.3.1</span> Multiple workflows, tuned for different circumstances</a></li>
+  <li><a href="#pairwise-sequence-or-sequence-group-alignment" id="toc-pairwise-sequence-or-sequence-group-alignment" class="nav-link" data-scroll-target="#pairwise-sequence-or-sequence-group-alignment"><span class="header-section-number">3.3.2</span> Pairwise sequence, or sequence group alignment</a></li>
+  <li><a href="#scoring-scheme" id="toc-scoring-scheme" class="nav-link" data-scroll-target="#scoring-scheme"><span class="header-section-number">3.3.3</span> Scoring scheme</a></li>
+  <li><a href="#guide-tree-building" id="toc-guide-tree-building" class="nav-link" data-scroll-target="#guide-tree-building"><span class="header-section-number">3.3.4</span> Guide tree building</a></li>
+  <li><a href="#rna-and-protein-alignment-incorporating-structural-information" id="toc-rna-and-protein-alignment-incorporating-structural-information" class="nav-link" data-scroll-target="#rna-and-protein-alignment-incorporating-structural-information"><span class="header-section-number">3.3.5</span> RNA and protein alignment incorporating structural information</a></li>
+  <li><a href="#extension-of-existing-alignments-with-new-sequences" id="toc-extension-of-existing-alignments-with-new-sequences" class="nav-link" data-scroll-target="#extension-of-existing-alignments-with-new-sequences"><span class="header-section-number">3.3.6</span> Extension of existing alignments with new sequences</a></li>
+  <li><a href="#parallelisation" id="toc-parallelisation" class="nav-link" data-scroll-target="#parallelisation"><span class="header-section-number">3.3.7</span> Parallelisation</a></li>
   </ul></li>
-  <li><a href="#where-can-i-find-out-more-about-mafft" id="toc-where-can-i-find-out-more-about-mafft" class="nav-link" data-scroll-target="#where-can-i-find-out-more-about-mafft">Where can I find out more about <code>MAFFT</code>?</a></li>
+  <li><a href="#where-can-i-find-out-more-about-mafft" id="toc-where-can-i-find-out-more-about-mafft" class="nav-link" data-scroll-target="#where-can-i-find-out-more-about-mafft"><span class="header-section-number">3.4</span> Where can I find out more about <code>MAFFT</code>?</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/mafft.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -245,7 +245,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-MAFFT" class="quarto-section-identifier"><code>MAFFT</code></span></h1>
+<h1 class="title"><span id="sec-MAFFT" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>MAFFT</code></span></span></h1>
 </div>
 
 
@@ -262,27 +262,27 @@ div.csl-indent {
 
 <p><code>MAFFT</code> is a very fast progressive alignment method, suitable for aligning large sequence sets, and tuneable for a range of input circumstances.</p>
 <p><code>MAFFT</code> stands for Multiple Alignment using Fast Fourier Transform, and was first described in 2002 <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>. Since then it has received multiple enhancements and extensions to improve scalability to larger sequence sets, and integration of other data such as protein structures <span class="citation" data-cites="Katoh2008-hj Katoh2013-jm Rozewicki2019-vj Katoh2019-et">(<a href="references.html#ref-Katoh2008-hj" role="doc-biblioref">Katoh and Toh 2008a</a>; <a href="references.html#ref-Katoh2013-jm" role="doc-biblioref">Katoh and Standley 2013</a>; <a href="references.html#ref-Rozewicki2019-vj" role="doc-biblioref">Rozewicki et al. 2019</a>; <a href="references.html#ref-Katoh2019-et" role="doc-biblioref">Katoh, Rozewicki, and Yamada 2019</a>)</span>.</p>
-<section id="where-can-i-download-mafft" class="level2">
-<h2 class="anchored" data-anchor-id="where-can-i-download-mafft">Where can I download <code>MAFFT</code>?</h2>
+<section id="where-can-i-download-mafft" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="where-can-i-download-mafft"><span class="header-section-number">3.1</span> Where can I download <code>MAFFT</code>?</h2>
 <ul>
 <li><a href="https://%60MAFFT%60.cbrc.jp/alignment/software/">https://<code>MAFFT</code>.cbrc.jp/alignment/software/</a></li>
 </ul>
 </section>
-<section id="where-can-i-use-mafft-in-a-browser" class="level2">
-<h2 class="anchored" data-anchor-id="where-can-i-use-mafft-in-a-browser">Where can I use <code>MAFFT</code> in a browser?</h2>
+<section id="where-can-i-use-mafft-in-a-browser" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="where-can-i-use-mafft-in-a-browser"><span class="header-section-number">3.2</span> Where can I use <code>MAFFT</code> in a browser?</h2>
 <ul>
 <li><a href="https://mafft.cbrc.jp/alignment/server/">https://mafft.cbrc.jp/alignment/server/</a></li>
 <li><a href="https://www.ebi.ac.uk/Tools/msa/%60MAFFT%60/">https://www.ebi.ac.uk/Tools/msa/<code>MAFFT</code>/</a></li>
 <li><a href="https://usegalaxy.eu/">https://usegalaxy.eu/</a></li>
 </ul>
 </section>
-<section id="how-does-mafft-work" class="level2">
-<h2 class="anchored" data-anchor-id="how-does-mafft-work">How does <code>MAFFT</code> work?</h2>
-<section id="multiple-workflows-tuned-for-different-circumstances" class="level3">
-<h3 class="anchored" data-anchor-id="multiple-workflows-tuned-for-different-circumstances">Multiple workflows, tuned for different circumstances</h3>
+<section id="how-does-mafft-work" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="how-does-mafft-work"><span class="header-section-number">3.3</span> How does <code>MAFFT</code> work?</h2>
+<section id="multiple-workflows-tuned-for-different-circumstances" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="multiple-workflows-tuned-for-different-circumstances"><span class="header-section-number">3.3.1</span> Multiple workflows, tuned for different circumstances</h3>
 <p><code>MAFFT</code> can be used as a “black box” alignment tool, but it offers several ways to combine its components. The various combinations can be chosen to suit your alignment task or available hardware, and fall into three main categories:</p>
-<section id="fft-ns1-fft-ns-2-progressive-methods-for-large-sequence-sets" class="level4">
-<h4 class="anchored" data-anchor-id="fft-ns1-fft-ns-2-progressive-methods-for-large-sequence-sets"><code>FFT-NS1</code>, <code>FFT-NS-2</code>: progressive methods for large sequence sets</h4>
+<section id="fft-ns1-fft-ns-2-progressive-methods-for-large-sequence-sets" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="fft-ns1-fft-ns-2-progressive-methods-for-large-sequence-sets"><span class="header-section-number">3.3.1.1</span> <code>FFT-NS1</code>, <code>FFT-NS-2</code>: progressive methods for large sequence sets</h4>
 <p>These approaches are simple progressive alignment workflows that take advantage of 6-tuple scoring to speed up initial distance matrix construction, and FFTs to speed up sequence and sequence group alignment.</p>
 <ol type="1">
 <li>A guide tree is constructed from 6-tuple similarity scores</li>
@@ -292,8 +292,8 @@ div.csl-indent {
 </ol>
 <p><code>FFT-NS-2</code> is the default <code>MAFFT</code> algorithm, chosen to balance speed and accuracy <span class="citation" data-cites="Katoh2008-hj">(<a href="references.html#ref-Katoh2008-hj" role="doc-biblioref">Katoh and Toh 2008a</a>)</span>.</p>
 </section>
-<section id="fft-ns-i-progressive-method-for-more-accurate-alignments-of-smaller-sequence-sets" class="level4">
-<h4 class="anchored" data-anchor-id="fft-ns-i-progressive-method-for-more-accurate-alignments-of-smaller-sequence-sets"><code>FFT-NS-i</code>: progressive method for more accurate alignments of smaller sequence sets</h4>
+<section id="fft-ns-i-progressive-method-for-more-accurate-alignments-of-smaller-sequence-sets" class="level4" data-number="3.3.1.2">
+<h4 data-number="3.3.1.2" class="anchored" data-anchor-id="fft-ns-i-progressive-method-for-more-accurate-alignments-of-smaller-sequence-sets"><span class="header-section-number">3.3.1.2</span> <code>FFT-NS-i</code>: progressive method for more accurate alignments of smaller sequence sets</h4>
 <p>This approach resembles that for <code>FFT-NS-2</code>, but iterates over guide tree reconstruction and sequence realignment until either no improvement can be detected in the alignment (by <em>Weighted Sum of Pairs</em>, WSP), or a maximum number of iterations is reached.</p>
 <ol type="1">
 <li>A guide tree is constructed from 6-tuple similarity scores</li>
@@ -303,8 +303,8 @@ div.csl-indent {
 <li>Steps 3 and 4 are repeated until there is no improvement in the alignment’s WSP score, or a maximum number of iterations is reached</li>
 </ol>
 </section>
-<section id="l-ins-i-e-ins-i-and-g-ins-i-consistency-scores-for-difficult-alignment-cases" class="level4">
-<h4 class="anchored" data-anchor-id="l-ins-i-e-ins-i-and-g-ins-i-consistency-scores-for-difficult-alignment-cases"><code>L-INS-i</code>, <code>E-INS-i</code>, and <code>G-INS-i</code>: consistency scores for difficult alignment cases</h4>
+<section id="l-ins-i-e-ins-i-and-g-ins-i-consistency-scores-for-difficult-alignment-cases" class="level4" data-number="3.3.1.3">
+<h4 data-number="3.3.1.3" class="anchored" data-anchor-id="l-ins-i-e-ins-i-and-g-ins-i-consistency-scores-for-difficult-alignment-cases"><span class="header-section-number">3.3.1.3</span> <code>L-INS-i</code>, <code>E-INS-i</code>, and <code>G-INS-i</code>: consistency scores for difficult alignment cases</h4>
 <p>These approaches resemble <code>FT-NS-i</code> in that they iterate over guide tree construction and realignment, but differ in that they carry out all-vs-all pairwise alignment initially, rather than the 6-tuple approximation, and employ a <code>COFFEE</code>-like <em>consistency score</em> alongside the WSP score, and different alignment algorithms during pairwise alignment.</p>
 <ul>
 <li><code>E-INS-i</code> uses a global Needleman-Wunsch approach to pairwise alignment, and is suited for alignments between sequences that may have several alignable domains and a high proportion of non-alignable insertions.</li>
@@ -313,53 +313,53 @@ div.csl-indent {
 </ul>
 </section>
 </section>
-<section id="pairwise-sequence-or-sequence-group-alignment" class="level3">
-<h3 class="anchored" data-anchor-id="pairwise-sequence-or-sequence-group-alignment">Pairwise sequence, or sequence group alignment</h3>
-<section id="fast-fourier-transform-speed-up" class="level4">
-<h4 class="anchored" data-anchor-id="fast-fourier-transform-speed-up">Fast Fourier Transform speed-up</h4>
+<section id="pairwise-sequence-or-sequence-group-alignment" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="pairwise-sequence-or-sequence-group-alignment"><span class="header-section-number">3.3.2</span> Pairwise sequence, or sequence group alignment</h3>
+<section id="fast-fourier-transform-speed-up" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="fast-fourier-transform-speed-up"><span class="header-section-number">3.3.2.1</span> Fast Fourier Transform speed-up</h4>
 <p><code>MAFFT</code> improves on the speed of simpler progressive alignment approaches <span class="citation" data-cites="Feng1987-lz">(<a href="references.html#ref-Feng1987-lz" role="doc-biblioref">Feng and Doolittle 1987</a>)</span> by using efficient algorithms to target slow steps in the process. The main advance, which gives <code>MAFFT</code> its name, was to use the <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">fast Fourier Transform (FFT)</a> - an algorithm that converts a signal from one quantitative <em>domain</em>, such as time, to a representation in the <em>frequency domain</em> - to speed up alignment of protein sequences.</p>
 <p>A key insight was to note that the frequency of amino acid substitutions is often determined by whether the substituting residue conserves important physicochemical properties <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>. Conservation of such properties is a feature of <em>neutral</em> or <em>near-neutral</em> substitutions. In the original paper, each amino acid (<span class="math inline">\(a\)</span>) was assigned to a vector of two values, one representing the amino acid residue’s volume (<span class="math inline">\(v(a)\)</span>), and one representing its polarity (<span class="math inline">\(p(a)\)</span>), normalised to zero mean and unit variance over all amino acids.</p>
 <p>By converting the amino acid sequences to be aligned to a sequence of these vectors, <code>MAFFT</code> calculates the <em>correlation</em> between sequences in terms of their polarity and volume components. In doing this, <code>MAFFT</code> considers a <em>positional lag</em> of <span class="math inline">\(k\)</span> sites in the sequence - a parameter controlling the size of sequence region being considered, and the overall correlation is reported for this value, as <span class="math inline">\(c(k)\)</span>. By using a fast Fourier Transform for this operation, the CPU time for a set of <span class="math inline">\(N\)</span> input sequences is reduced from <span class="math inline">\(O(N^2)\)</span> to <span class="math inline">\(O(N log N)\)</span>.</p>
 <p>This concept can be extended from an alignment between two sequences to an alignment between two already-aligned groups of sequences, by replacing the vector of volume (or polarity) values for a single sequence with a vector that is the linear combination of the volume components for the aligned group <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>.</p>
 </section>
-<section id="finding-homologous-sequence-segments" class="level4">
-<h4 class="anchored" data-anchor-id="finding-homologous-sequence-segments">Finding homologous sequence segments</h4>
+<section id="finding-homologous-sequence-segments" class="level4" data-number="3.3.2.2">
+<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="finding-homologous-sequence-segments"><span class="header-section-number">3.3.2.2</span> Finding homologous sequence segments</h4>
 <p>If a pair of sequences has homologous regions - conserving polarity and volume - then there will be a corresponding peak in the graph of <span class="math inline">\(c(k)\)</span>. This identifies the <em>positional lag</em> of the match, but not its location. So, to determine the actual location of the match, a <em>sliding window analysis</em> (window size 30) is carried out to identify local homologies for the 20 highest peaks in <span class="math inline">\(c(k)\)</span>. A score threshold of 0.7 per site is applied, and any window with a higher value is considered a <em>homologous segment</em>. Successive segments identified as <em>homologous segments</em> are combined, to a maximum of 150 sites per homolgous segment. Segments longer than this are divided into segments of maximum length 150 <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>.</p>
 </section>
-<section id="aligning-sequence-pairs" class="level4">
-<h4 class="anchored" data-anchor-id="aligning-sequence-pairs">Aligning sequence pairs</h4>
+<section id="aligning-sequence-pairs" class="level4" data-number="3.3.2.3">
+<h4 data-number="3.3.2.3" class="anchored" data-anchor-id="aligning-sequence-pairs"><span class="header-section-number">3.3.2.3</span> Aligning sequence pairs</h4>
 <p>A matrix of homologous segments between two sequences is constructed, and the alignment obtained by the standard <a href="https://en.wikipedia.org/wiki/Dynamic_programming"><em>dynamic programming</em></a> procedure <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>.</p>
 </section>
-<section id="application-to-nucleotide-sequences" class="level4">
-<h4 class="anchored" data-anchor-id="application-to-nucleotide-sequences">Application to nucleotide sequences</h4>
+<section id="application-to-nucleotide-sequences" class="level4" data-number="3.3.2.4">
+<h4 data-number="3.3.2.4" class="anchored" data-anchor-id="application-to-nucleotide-sequences"><span class="header-section-number">3.3.2.4</span> Application to nucleotide sequences</h4>
 <p>For nucleotide sequences, rather than using vectors that represent amino acid side chain properties, four-dimensional vectors of A, C, G, T are used at each column. Otherwise the process is identical <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>.</p>
 </section>
 </section>
-<section id="scoring-scheme" class="level3">
-<h3 class="anchored" data-anchor-id="scoring-scheme">Scoring scheme</h3>
+<section id="scoring-scheme" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="scoring-scheme"><span class="header-section-number">3.3.3</span> Scoring scheme</h3>
 <p><code>MAFFT</code> departs from the common approach of using an all-positive-value scoring matrix, instead adopting a normalised similarity matrix. By default, this was originally derived from a 200 PAM log-odds matrix for both protein and nucleotide alignments, and a simplified gap penalty scheme was also employed <span class="citation" data-cites="Katoh2002-nz">(<a href="references.html#ref-Katoh2002-nz" role="doc-biblioref">Katoh et al. 2002</a>)</span>. More recently, the 200 PAM matrix has been replaced as default by BLOSUM62, and the gap penalty scheme was heavily revised <span class="citation" data-cites="Katoh2008-hj">(<a href="references.html#ref-Katoh2008-hj" role="doc-biblioref">Katoh and Toh 2008a</a>)</span>.</p>
 </section>
-<section id="guide-tree-building" class="level3">
-<h3 class="anchored" data-anchor-id="guide-tree-building">Guide tree building</h3>
+<section id="guide-tree-building" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="guide-tree-building"><span class="header-section-number">3.3.4</span> Guide tree building</h3>
 <p>The modified UPGMA tree building method used in the original version of <code>MAFFT</code> did not scale well to very large sequence sets, and was replaced in v6 onwards by the PartTree algorithm <span class="citation" data-cites="Katoh2008-hj Katoh2008-if">(<a href="references.html#ref-Katoh2008-hj" role="doc-biblioref">Katoh and Toh 2008a</a>, <a href="references.html#ref-Katoh2008-if" role="doc-biblioref">2008b</a>)</span>. This constructs an approximate tree from unaligned sequences by partitioning the dataset and is <span class="math inline">\(O(N log N)\)</span> rather than <span class="math inline">\(O(N^2)\)</span>, like UPGMA.</p>
 </section>
-<section id="rna-and-protein-alignment-incorporating-structural-information" class="level3">
-<h3 class="anchored" data-anchor-id="rna-and-protein-alignment-incorporating-structural-information">RNA and protein alignment incorporating structural information</h3>
+<section id="rna-and-protein-alignment-incorporating-structural-information" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="rna-and-protein-alignment-incorporating-structural-information"><span class="header-section-number">3.3.5</span> RNA and protein alignment incorporating structural information</h3>
 <p>In <code>MAFFT</code> v6, options were introduced to include structural information when aligning RNA sequences. This takes base pairing probability into account, and applies a novel four-way alignment consistency function <span class="citation" data-cites="Katoh2008-hj">(<a href="references.html#ref-Katoh2008-hj" role="doc-biblioref">Katoh and Toh 2008a</a>)</span>.</p>
 <p><code>MAFFT</code> v7 introduced the ability to inform an alignment by using the <code>ASH</code> structural alignment program and, in particular, the inter-residue distance between alpha carbons for amino acids in the alignment. This is likely to be most useful when aligning sequence-diverse, but structurally similar, proteins <span class="citation" data-cites="Katoh2013-jm">(<a href="references.html#ref-Katoh2013-jm" role="doc-biblioref">Katoh and Standley 2013</a>)</span>.</p>
 <p><code>MAFFT</code> has been integrated with the <code>DASH</code> structural alignment database, to use structural alignment information as a set of constraints on sequence alignment. This integration is available through the <a href="https://mafft.cbrc.jp/alignment/server/">official <code>MAFFT</code> alignment server</a> <span class="citation" data-cites="Rozewicki2019-vj">(<a href="references.html#ref-Rozewicki2019-vj" role="doc-biblioref">Rozewicki et al. 2019</a>)</span>.</p>
 </section>
-<section id="extension-of-existing-alignments-with-new-sequences" class="level3">
-<h3 class="anchored" data-anchor-id="extension-of-existing-alignments-with-new-sequences">Extension of existing alignments with new sequences</h3>
+<section id="extension-of-existing-alignments-with-new-sequences" class="level3" data-number="3.3.6">
+<h3 data-number="3.3.6" class="anchored" data-anchor-id="extension-of-existing-alignments-with-new-sequences"><span class="header-section-number">3.3.6</span> Extension of existing alignments with new sequences</h3>
 <p>Further improvements were introduced in <code>MAFFT</code> v7 to enable addition of unaligned sequences into an existing multiple sequence alignment <span class="citation" data-cites="Katoh2013-jm">(<a href="references.html#ref-Katoh2013-jm" role="doc-biblioref">Katoh and Standley 2013</a>)</span>.</p>
 </section>
-<section id="parallelisation" class="level3">
-<h3 class="anchored" data-anchor-id="parallelisation">Parallelisation</h3>
+<section id="parallelisation" class="level3" data-number="3.3.7">
+<h3 data-number="3.3.7" class="anchored" data-anchor-id="parallelisation"><span class="header-section-number">3.3.7</span> Parallelisation</h3>
 <p>Threading was added to <code>MAFFT</code> v7. Progressive alignment method outputs are identical in non-threaded and threaded runs, but iterative refinement-based alignments may generate different output when threaded <span class="citation" data-cites="Katoh2013-jm">(<a href="references.html#ref-Katoh2013-jm" role="doc-biblioref">Katoh and Standley 2013</a>)</span>.</p>
 </section>
 </section>
-<section id="where-can-i-find-out-more-about-mafft" class="level2">
-<h2 class="anchored" data-anchor-id="where-can-i-find-out-more-about-mafft">Where can I find out more about <code>MAFFT</code>?</h2>
+<section id="where-can-i-find-out-more-about-mafft" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="where-can-i-find-out-more-about-mafft"><span class="header-section-number">3.4</span> Where can I find out more about <code>MAFFT</code>?</h2>
 <ul>
 <li><a href="https://mafft.cbrc.jp/alignment/software/tips0.html"><code>MAFFT</code> v7 tips</a></li>
 <li><a href="https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html"><code>MAFFT</code> v7 algorithm</a></li>
