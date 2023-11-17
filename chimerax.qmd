@@ -1,0 +1,9 @@
+# `ChimeraX` {#sec-ChimeraX .unnumbered}
+
+`ChimeraX` is a widely-used, open source software package for macromolecular visualisation and analysis. It is free for academic, government, nonprofit, and personal users.
+
+## Where can I download `ChimeraX`?
+
+`ChimeraX` is available from the UC San Francisco website.
+
+- [https://www.cgl.ucsf.edu/chimerax/download.html](https://www.cgl.ucsf.edu/chimerax/download.html)
