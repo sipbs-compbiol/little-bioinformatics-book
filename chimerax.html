@@ -204,6 +204,24 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#where-can-i-download-chimerax" id="toc-where-can-i-download-chimerax" class="nav-link active" data-scroll-target="#where-can-i-download-chimerax"><span class="header-section-number">5.1</span> Where can I download <code>ChimeraX</code>?</a></li>
+  <li><a href="#how-do-i-use-chimerax" id="toc-how-do-i-use-chimerax" class="nav-link" data-scroll-target="#how-do-i-use-chimerax"><span class="header-section-number">5.2</span> How do I use <code>ChimeraX</code>?</a>
+  <ul class="collapse">
+  <li><a href="#chimerax-layout" id="toc-chimerax-layout" class="nav-link" data-scroll-target="#chimerax-layout"><span class="header-section-number">5.2.1</span> <code>ChimeraX</code> layout</a></li>
+  </ul></li>
+  <li><a href="#loading-a-structure" id="toc-loading-a-structure" class="nav-link" data-scroll-target="#loading-a-structure"><span class="header-section-number">5.3</span> Loading a structure</a></li>
+  <li><a href="#changing-the-appearance-of-the-structure." id="toc-changing-the-appearance-of-the-structure." class="nav-link" data-scroll-target="#changing-the-appearance-of-the-structure."><span class="header-section-number">5.4</span> Changing the appearance of the structure.</a>
+  <ul class="collapse">
+  <li><a href="#switching-from-cartoons-to-atoms" id="toc-switching-from-cartoons-to-atoms" class="nav-link" data-scroll-target="#switching-from-cartoons-to-atoms"><span class="header-section-number">5.4.1</span> Switching from cartoons to atoms</a></li>
+  <li><a href="#changing-atoms-representation" id="toc-changing-atoms-representation" class="nav-link" data-scroll-target="#changing-atoms-representation"><span class="header-section-number">5.4.2</span> Changing atoms representation</a></li>
+  <li><a href="#changing-molecule-representation" id="toc-changing-molecule-representation" class="nav-link" data-scroll-target="#changing-molecule-representation"><span class="header-section-number">5.4.3</span> Changing molecule representation</a></li>
+  </ul></li>
+  <li><a href="#visualising-sequence-conservation" id="toc-visualising-sequence-conservation" class="nav-link" data-scroll-target="#visualising-sequence-conservation"><span class="header-section-number">5.5</span> Visualising Sequence Conservation</a>
+  <ul class="collapse">
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">5.5.1</span> Requirements</a></li>
+  <li><a href="#loading-the-alignment-data" id="toc-loading-the-alignment-data" class="nav-link" data-scroll-target="#loading-the-alignment-data"><span class="header-section-number">5.5.2</span> Loading the alignment data</a></li>
+  <li><a href="#visualising-sequence-conservation-1" id="toc-visualising-sequence-conservation-1" class="nav-link" data-scroll-target="#visualising-sequence-conservation-1"><span class="header-section-number">5.5.3</span> Visualising sequence conservation</a></li>
+  <li><a href="#selectively-visualising-conserved-sites" id="toc-selectively-visualising-conserved-sites" class="nav-link" data-scroll-target="#selectively-visualising-conserved-sites"><span class="header-section-number">5.5.4</span> Selectively visualising conserved sites</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/edit/main/chimerax.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sipbs-compbiol/little-bioinformatics-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -230,12 +248,220 @@ ul.task-list li input[type="checkbox"] {
 <p><code>ChimeraX</code> is a widely-used, open source software package for macromolecular visualisation and analysis. It is free for academic, government, nonprofit, and personal users.</p>
 <section id="where-can-i-download-chimerax" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="where-can-i-download-chimerax"><span class="header-section-number">5.1</span> Where can I download <code>ChimeraX</code>?</h2>
-<p><code>ChimeraX</code> is available from the UC San Francisco website.</p>
+<p><code>ChimeraX</code> is available for download from the UC San Francisco website.</p>
 <ul>
 <li><a href="https://www.cgl.ucsf.edu/chimerax/download.html">https://www.cgl.ucsf.edu/chimerax/download.html</a></li>
 </ul>
+</section>
+<section id="how-do-i-use-chimerax" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="how-do-i-use-chimerax"><span class="header-section-number">5.2</span> How do I use <code>ChimeraX</code>?</h2>
+<p>Once installed on your machine, use the <code>ChimeraX</code> application icon to start the program. You will be greeted by the standard <code>ChimeraX</code> landing screen (<a href="#fig-chimerax_landing">Figure&nbsp;<span>5.1</span></a>).</p>
+<div id="fig-chimerax_landing" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/01-chimerax_landing.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.1: <code>ChimeraX</code> landing screen.</figcaption>
+</figure>
+</div>
+<section id="chimerax-layout" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="chimerax-layout"><span class="header-section-number">5.2.1</span> <code>ChimeraX</code> layout</h3>
+<p>The <code>ChimeraX</code> screen is divided into four main areas.</p>
+<ul>
+<li>Along the top of the window is a <strong>ribbon</strong> of icons, and a list of category buttons. Choosing buttons changes the icon/action set.</li>
+<li>Along the bottom of the screen is a <strong>command line interface</strong>, where commands can be entered to control <code>ChimeraX</code>.</li>
+<li>On the right hand side is the <strong>log window</strong> which provides useful information and outputs. This can be toggled on and off with the leftmost button at the bottom right-hand corner (or by entering the <code>ui windowfill toggle</code> command in the command line interface).</li>
+<li>The largest part of the screen is the <strong>main visualisation window</strong>, and this can be expanded to fill the full screen width by toggling the log window off.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>The <strong>log window</strong> updates with the equivalent command when icons or buttons are used. This is a useful way to learn commands for scripting <code>ChimeraX</code>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="loading-a-structure" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="loading-a-structure"><span class="header-section-number">5.3</span> Loading a structure</h2>
+<p>Once you have downloaded a structure from <a href="https://www.rcsb.org/">RCSB/PDB</a>, there are three ways to load it into <code>ChimeraX</code>.</p>
+<ol type="1">
+<li>Click on the <code>Open</code> icon in the <strong><code>Home</code> ribbon</strong>, and use the file dialogue to select your file.</li>
+<li>Use <code>File -&gt; Open</code> in the menu bar (or Cmd-O) to bring up the file dialogue box to select your file.</li>
+<li>Enter <code>open [PATH TO FILE]</code> in the <strong>command line interface</strong>, specifying the file you want to open.</li>
+</ol>
+<p>Once the file is loaded, you will be presented with the default view, and information in the <strong>log window</strong> (<a href="#fig-chimerax_load">Figure&nbsp;<span>5.2</span></a>). The model will also be visible in the window at the lower right of the screen.</p>
+<div id="fig-chimerax_load" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/02-chimerax_load.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.2: <code>ChimeraX</code> view after loading the <code>4I61</code> structure.</figcaption>
+</figure>
+</div>
+</section>
+<section id="changing-the-appearance-of-the-structure." class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="changing-the-appearance-of-the-structure."><span class="header-section-number">5.4</span> Changing the appearance of the structure.</h2>
+<section id="switching-from-cartoons-to-atoms" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="switching-from-cartoons-to-atoms"><span class="header-section-number">5.4.1</span> Switching from cartoons to atoms</h3>
+<p>By default, <code>ChimeraX</code> presents a <strong>cartoon view</strong> of the loaded model. In the <code>Home</code> riboon, you can use the <code>Show</code> and <code>Hide</code> <code>Cartoons</code> icons to show or hide this representation, and the <code>Show</code> and <code>Hide</code> <code>Atoms</code> icons to show or hide an atom-level representation (e.g. <a href="#fig-chimerax_atoms">Figure&nbsp;<span>5.3</span></a>).</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Change from <em>cartoon</em> to <em>atoms</em> representation.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Click on <code>Show Atoms</code></li>
+<li>Click on <code>Hide Cartoons</code></li>
+</ol>
+<p><em>or</em> in the command line interface, enter</p>
+<pre class="text"><code>show atoms
+hide cartoons</code></pre>
+</div>
+</div>
+</div>
+<div id="fig-chimerax_atoms" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/03-chimerax_atoms.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.3: <code>ChimeraX</code> atoms view of the <code>4I61</code> structure.</figcaption>
+</figure>
+</div>
+</section>
+<section id="changing-atoms-representation" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="changing-atoms-representation"><span class="header-section-number">5.4.2</span> Changing atoms representation</h3>
+<p>The <code>Home</code> ribbon provides icons that allow switching between <em>ball and stick</em>, <em>space-filling</em>/<em>sphere</em> (<a href="#fig-chimerax_sphere">Figure&nbsp;<span>5.4</span></a>), and <em>stick</em> representations of the atomic structure.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Command-line equivalents
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre class="text"><code>style stick
+style sphere
+style ball</code></pre>
+</div>
+</div>
+</div>
+<div id="fig-chimerax_sphere" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/04-chimerax_sphere.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.4: <code>ChimeraX</code> space-filling view of the <code>4I61</code> structure.</figcaption>
+</figure>
+</div>
+</section>
+<section id="changing-molecule-representation" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="changing-molecule-representation"><span class="header-section-number">5.4.3</span> Changing molecule representation</h3>
+<p>The <strong><code>Molecule Display</code> ribbon</strong> allows you to control the colouring and other visualisation features for the model. Clicking on the <code>chain</code> icon will colour each chain in the model differently, to help visually resolve the overall quaternary structure (<a href="#fig-chimerax_chains">Figure&nbsp;<span>5.5</span></a>).</p>
+<div id="fig-chimerax_chains" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/05-chimerax_chains.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.5: <code>ChimeraX</code> space-filling view of the <code>4I61</code> structure, with chain colouring.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="visualising-sequence-conservation" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="visualising-sequence-conservation"><span class="header-section-number">5.5</span> Visualising Sequence Conservation</h2>
+<p>If you have a sequence alignment including the sequence of the protein(s) in your structure, then you can automatically render your model with residues coloured by the extent of sequence conservation.</p>
+<section id="requirements" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">5.5.1</span> Requirements</h3>
+<ul>
+<li>A structure that includes your protein of interest</li>
+<li>A multiple sequence alignment including your protein of interest</li>
+</ul>
+<p>::: :{ .callout-warning } ## Your sequence alignment must meet these criteria</p>
+<ul>
+<li>The sequence corresponding to your protein <strong>must</strong> be the first sequence in the alignment.</li>
+<li>Your alignment <strong>must</strong> be in <code>CLUSTAL</code> format. :::</li>
+</ul>
+</section>
+<section id="loading-the-alignment-data" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="loading-the-alignment-data"><span class="header-section-number">5.5.2</span> Loading the alignment data</h3>
+<p>The sequence alignment can be loaded using the standard <code>File -&gt; Open</code> menu option (<a href="#fig-chimerax_open">Figure&nbsp;<span>5.6</span></a>).</p>
+<div id="fig-chimerax_open" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/06-chimerax_open.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.6: <code>ChimeraX</code> file open menu option</figcaption>
+</figure>
+</div>
+<p>Once the file dialogue opens, select the sequence alignment file and click the <code>Open</code> button (<a href="#fig-chimerax_file_dialog">Figure&nbsp;<span>5.7</span></a>).</p>
+<div id="fig-chimerax_file_dialog" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/07-chimerax_file_dialog.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.7: <code>Chimerax</code> file dialogue box. The sequence alignment file is <code>struct_aligned.aln</code></figcaption>
+</figure>
+</div>
+<p>This will open the <strong>Sequence Viewer Window</strong> to display your multiple sequence alignment, with a histogram of sequence conservation at the top (<a href="#fig-chimerax_sequence_viewer">Figure&nbsp;<span>5.8</span></a>). The sequence associated with your protein model will be highlighted.</p>
+<div id="fig-chimerax_sequence_viewer" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/08-chimerax_sequence_viewer.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.8: <code>ChimeraX</code> with sequence viewer showing alignment for the model’s protein sequences. The sequence associated with the protein model structure (<code>F8DQ39</code>) is highlighted with a red/orange background.</figcaption>
+</figure>
+</div>
+</section>
+<section id="visualising-sequence-conservation-1" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="visualising-sequence-conservation-1"><span class="header-section-number">5.5.3</span> Visualising sequence conservation</h3>
+<p><code>ChimeraX</code> associates the sequence conservation, as represented in the histogram in the <strong>Sequence Viewer Window</strong>, with a <em>variable</em> called <code>seq_conservation</code>. <code>ChimeraX</code> can use this to change the representation of the protein model by assigning the variable to some attribute, such as <code>color</code> (for rendered colour).</p>
+<p>We can change this attribute using the <strong>command line interface</strong>, by entering the command <code>color byattr seq_conservation</code> (<a href="#fig-chimerax_color_conservation_1">Figure&nbsp;<span>5.9</span></a>).</p>
+<div id="fig-chimerax_color_conservation_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/09-chimerax_color_cons_cmd.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.9: <code>ChimeraX</code> command to colour residues by sequence conservation (As defined in a pre-loaded alignment).</figcaption>
+</figure>
+</div>
+<p>This results, by default, in colouring <em>conserved</em> sites in red (the more intense the hue, the more conserved the site), and the <em>variable</em> sites in blue (again, the more intense the hue, the more variable the site). It can be helpful to change the model representation from space-filling <em>sphere</em> to <em>cartoon</em> or similar, so that the interior of the protein can be seen more clearly (<a href="#fig-chimerax_color_conservation_2">Figure&nbsp;<span>5.10</span></a>).</p>
+<div id="fig-chimerax_color_conservation_2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/10-chimerax_color_cons_cartoon.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.10: <code>ChimeraX</code> cartoon visualisation of <code>4I61</code> showing highly-conserved sites in red, and variable sites in blue. Note how the conserved sites are located where the three subunits meet, and where the hexagonal trimer would interact with other trimers (suggesting selection pressure to retain a particular interaction and conformation), and how the variable sites are primarily located on the convex, outward-facing face of the hexagonal subunit.</figcaption>
+</figure>
+</div>
+</section>
+<section id="selectively-visualising-conserved-sites" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="selectively-visualising-conserved-sites"><span class="header-section-number">5.5.4</span> Selectively visualising conserved sites</h3>
+<p>We can select sites in the model by attributes, such as sequence conservation, using the <code>select</code> command. For example, to select all sites with a conservation score above 0.5 (i.e.&nbsp;the more conserved sites) we would use <code>select ::seq_conservation &gt; 0.5</code> (<a href="#fig-chimerax_sel_cons">Figure&nbsp;<span>5.11</span></a>).</p>
+<div id="fig-chimerax_sel_cons" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/11-chimerax_select_cons_cmd.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.11: <code>ChimeraX</code> command to select residues above a 0.5 sequence conservation score.</figcaption>
+</figure>
+</div>
+<p>Executing this command will select only the sites with a sequence conservation score above 0.5, and highlight them on the current visualisation with a green outline (<a href="#fig-chimerax_sel_cons_hlt">Figure&nbsp;<span>5.12</span></a>).</p>
+<div id="fig-chimerax_sel_cons_hlt" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/12-chimerax_select_cons_hlt.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.12: <code>ChimeraX</code> visualisation with sites having above 0.5 sequence conservation score highlihgted in green.</figcaption>
+</figure>
+</div>
+<p>With only these sites selected, we can show the atom representations for only these sites by clicking on the <code>Show Atoms</code> icon, or using the command <code>show sel atoms</code>. In (<a href="#fig-chimerax_sel_cons_spc">Figure&nbsp;<span>5.13</span></a>) this represents those sites as space-filling spheres.</p>
+<div id="fig-chimerax_sel_cons_spc" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/13-chimerax_select_cons_sphr.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.13: <code>ChimeraX</code> visualisation with sites having above 0.5 sequence conservation score rendered as space-filling spheres.</figcaption>
+</figure>
+</div>
+<p>We can then colour the model by sequence conservation as before with <code>color byattr seq_conservation</code>, then select only the <em>low conservation</em> sites with the commmand <code>select ::seq_conservation &lt; 0.5</code>, and recolour them by chain (<code>color sel bychain</code>), to obtain the image in <a href="#fig-chimerax_cons_on_cartoon">Figure&nbsp;<span>5.14</span></a>, where the protein chains are coloured differently, but highly-conserved residues are indicated in red and space-filling form.</p>
+<div id="fig-chimerax_cons_on_cartoon" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="assets/images/chimerax/14-chimerax_colour_cons_sphr.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.14: <code>ChimeraX</code> visualisation with sites having above 0.5 sequence conservation score rendered as space-filling spheres and coloured by sequence conservation.</figcaption>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
