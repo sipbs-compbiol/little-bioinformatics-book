@@ -4,6 +4,140 @@
 
 ## Where can I download `ChimeraX`?
 
-`ChimeraX` is available from the UC San Francisco website.
+`ChimeraX` is available for download from the UC San Francisco website.
 
 - [https://www.cgl.ucsf.edu/chimerax/download.html](https://www.cgl.ucsf.edu/chimerax/download.html)
+
+## How do I use `ChimeraX`?
+
+Once installed on your machine, use the `ChimeraX` application icon to start the program. You will be greeted by the standard `ChimeraX` landing screen (@fig-chimerax_landing.png). 
+
+![`ChimeraX` landing screen.](assets/images/chimerax/01-chimerax_landing.png){#fig-chimerax_landing width=75%}
+
+### `ChimeraX` layout
+
+The `ChimeraX` screen is divided into four main areas.
+
+- Along the top of the window is a **ribbon** of icons, and a list of category buttons. Choosing buttons changes the icon/action set.
+- Along the bottom of the screen is a **command line interface**, where commands can be entered to control `ChimeraX`.
+- On the right hand side is the **log window** which provides useful information and outputs. This can be toggled on and off with the leftmost button at the bottom right-hand corner (or by entering the `ui windowfill toggle` command in the command line interface).
+- The largest part of the screen is the **main visualisation window**, and this can be expanded to fill the full screen width by toggling the log window off.
+
+::: {.callout-tip}
+The **log window** updates with the equivalent command when icons or buttons are used. This is a useful way to learn commands for scripting `ChimeraX`.
+:::
+
+## Loading a structure
+
+Once you have downloaded a structure from [RCSB/PDB](https://www.rcsb.org/), there are three ways to load it into `ChimeraX`.
+
+1. Click on the `Open` icon in the **`Home` ribbon**, and use the file dialogue to select your file.
+2. Use `File -> Open` in the menu bar (or Cmd-O) to bring up the file dialogue box to select your file.
+3. Enter `open [PATH TO FILE]` in the **command line interface**, specifying the file you want to open.
+
+Once the file is loaded, you will be presented with the default view, and information in the **log window** (@fig-chimerax_load). The model will also be visible in the window at the lower right of the screen.
+
+![`ChimeraX` view after loading the `4I61` structure.](assets/images/chimerax/02-chimerax_load.png){#fig-chimerax_load width=75%}
+
+## Changing the appearance of the structure.
+
+### Switching from cartoons to atoms
+
+By default, `ChimeraX` presents a **cartoon view** of the loaded model. In the `Home` riboon, you can use the `Show` and `Hide` `Cartoons` icons to show or hide this representation, and the `Show` and `Hide` `Atoms` icons to show or hide an atom-level representation (e.g. @fig-chimerax_atoms).
+
+::: {.callout-tip collapse="true"}
+## Change from _cartoon_ to _atoms_ representation.
+
+1. Click on `Show Atoms`
+2. Click on `Hide Cartoons`
+
+_or_ in the command line interface, enter
+
+```text
+show atoms
+hide cartoons
+```
+:::
+
+![`ChimeraX` atoms view of the `4I61` structure.](assets/images/chimerax/03-chimerax_atoms.png){#fig-chimerax_atoms width=75%}
+
+### Changing atoms representation
+
+The `Home` ribbon provides icons that allow switching between _ball and stick_, _space-filling_/_sphere_ (@fig-chimerax_sphere), and _stick_ representations of the atomic structure.
+
+::: {.callout-tip collapse="true"}
+## Command-line equivalents
+
+```text
+style stick
+style sphere
+style ball
+```
+:::
+
+![`ChimeraX` space-filling view of the `4I61` structure.](assets/images/chimerax/04-chimerax_sphere.png){#fig-chimerax_sphere width=75%}
+
+### Changing molecule representation
+
+The **`Molecule Display` ribbon** allows you to control the colouring and other visualisation features for the model. Clicking on the `chain` icon will colour each chain in the model differently, to help visually resolve the overall quaternary structure (@fig-chimerax_chains).
+
+![`ChimeraX` space-filling view of the `4I61` structure, with chain colouring.](assets/images/chimerax/05-chimerax_chains.png){#fig-chimerax_chains width=75%}
+
+## Visualising Sequence Conservation
+
+If you have a sequence alignment including the sequence of the protein(s) in your structure, then you can automatically render your model with residues coloured by the extent of sequence conservation.
+
+### Requirements
+
+- A structure that includes your protein of interest
+- A multiple sequence alignment including your protein of interest
+
+::: :{ .callout-warning }
+## Your sequence alignment must meet these criteria
+
+- The sequence corresponding to your protein **must** be the first sequence in the alignment.
+- Your alignment **must** be in `CLUSTAL` format.
+:::
+
+### Loading the alignment data
+
+The sequence alignment can be loaded using the standard `File -> Open` menu option (@fig-chimerax_open).
+
+![`ChimeraX` file open menu option](assets/images/chimerax/06-chimerax_open.png){#fig-chimerax_open width=75%}
+
+Once the file dialogue opens, select the sequence alignment file and click the `Open` button (@fig-chimerax_file_dialog).
+
+![`ChimeraX` file dialogue box. Here, the alignment file is `struct_aligned.aln`](assets/images/chimerax/07-chimerax_file_dialogue.png){#fig-chimerax_file_dialog width=75%}
+This will open the **Sequence Viewer Window** to display your multiple sequence alignment, with a histogram of sequence conservation at the top (@fig-chimerax_sequence_viewer). The sequence associated with your protein model will be highlighted.
+
+![`ChimeraX` with sequence viewer showing alignment for the model's protein sequences. The sequence associated with the protein model structure (`F8DQ39`) is highlighted with a red/orange background.](assets/images/chimerax/08-chimerax_sequence_viewer.png){#fig-chimerax_sequence_viewer width=75%}
+
+### Visualising sequence conservation
+
+`ChimeraX` associates the sequence conservation, as represented in the histogram in the **Sequence Viewer Window**, with a _variable_ called `seq_conservation`. `ChimeraX` can use this to change the representation of the protein model by assigning the variable to some attribute, such as `color` (for rendered colour).
+
+We can change this attribute using the **command line interface**, by entering the command `color byattr seq_conservation` (@fig-chimerax_color_conservation_1).
+
+![`ChimeraX` command to colour residues by sequence conservation (As defined in a pre-loaded alignment).](assets/images/chimerax/09-chimerax_color_cons_cmd.png){#fig-chimerax_color_conservation_1 width=75%}
+
+This results, by default, in colouring _conserved_ sites in red (the more intense the hue, the more conserved the site), and the _variable_ sites in blue (again, the more intense the hue, the more variable the site). It can be helpful to change the model representation from space-filling _sphere_ to _cartoon_ or similar, so that the interior of the protein can be seen more clearly (@fig-chimerax_color_conservation_2).
+
+![`ChimeraX` cartoon visualisation of `4I61` showing highly-conserved sites in red, and variable sites in blue. Note how the conserved sites are located where the three subunits meet, and where the hexagonal trimer would interact with other trimers (suggesting selection pressure to retain a particular interaction and conformation), and how the variable sites are primarily located on the convex, outward-facing face of the hexagonal subunit.](assets/images/chimerax/10-chimerax_color_cons_cartoon.png){#fig-chimerax_color_conservation_2 width=75%}
+
+### Selectively visualising conserved sites
+
+We can select sites in the model by attributes, such as sequence conservation, using the `select` command. For example, to select all sites with a conservation score above 0.5 (i.e. the more conserved sites) we would use `select ::seq_conservation > 0.5` (@fig-chimerax_sel_cons).
+
+![`ChimeraX` command to select residues above a 0.5 sequence conservation score.](assets/images/chimerax/11-chimerax_select_cons_cmd.png){#fig-chimerax_sel_cons width=75%}
+
+Executing this command will select only the sites with a sequence conservation score above 0.5, and highlight them on the current visualisation with a green outline (@fig-chimerax_sel_cons_hlt).
+
+![`ChimeraX` visualisation with sites having above 0.5 sequence conservation score highlihgted in green.](assets/images/chimerax/12-chimerax_select_cons_hlt.png){#fig-chimerax_sel_cons_hlt width=75%}
+
+With only these sites selected, we can show the atom representations for only these sites by clicking on the `Show Atoms` icon, or using the command `show sel atoms`. In (@fig-chimerax_sel_cons_spc) this represents those sites as space-filling spheres.
+
+![`ChimeraX` visualisation with sites having above 0.5 sequence conservation score rendered as space-filling spheres.](assets/images/chimerax/13-chimerax_select_cons_sphr.png){#fig-chimerax_sel_cons_spc width=75%}
+
+We can then colour the model by sequence conservation as before with `color byattr seq_conservation`, then select only the _low conservation_ sites with the commmand `select ::seq_conservation < 0.5`, and recolour them by chain (`color sel bychain`), to obtain the image in @fig-chimerax_cons_on_cartoon, where the protein chains are coloured differently, but highly-conserved residues are indicated in red and space-filling form.
+
+![`ChimeraX` visualisation with sites having above 0.5 sequence conservation score rendered as space-filling spheres and coloured by sequence conservation.](assets/images/chimerax/14-chimerax_colour_cons_sphr.png){#fig-chimerax_cons_on_cartoon width=75%}
