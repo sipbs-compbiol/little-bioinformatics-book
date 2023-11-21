@@ -92,7 +92,7 @@ If you have a sequence alignment including the sequence of the protein(s) in you
 - A structure that includes your protein of interest
 - A multiple sequence alignment including your protein of interest
 
-::: :{ .callout-warning }
+::: { .callout-warning }
 ## Your sequence alignment must meet these criteria
 
 - The sequence corresponding to your protein **must** be the first sequence in the alignment.
