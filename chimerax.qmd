@@ -10,7 +10,7 @@
 
 ## How do I use `ChimeraX`?
 
-Once installed on your machine, use the `ChimeraX` application icon to start the program. You will be greeted by the standard `ChimeraX` landing screen (@fig-chimerax_landing.png). 
+Once installed on your machine, use the `ChimeraX` application icon to start the program. You will be greeted by the standard `ChimeraX` landing screen (@fig-chimerax_landing). 
 
 ![`ChimeraX` landing screen.](assets/images/chimerax/01-chimerax_landing.png){#fig-chimerax_landing width=75%}
 
@@ -107,7 +107,8 @@ The sequence alignment can be loaded using the standard `File -> Open` menu opti
 
 Once the file dialogue opens, select the sequence alignment file and click the `Open` button (@fig-chimerax_file_dialog).
 
-![`ChimeraX` file dialogue box. Here, the alignment file is `struct_aligned.aln`](assets/images/chimerax/07-chimerax_file_dialogue.png){#fig-chimerax_file_dialog width=75%}
+![`Chimerax` file dialogue box. The sequence alignment file is `struct_aligned.aln`](assets/images/chimerax/07-chimerax_file_dialog.png){#fig-chimerax_file_dialog width=75%}
+
 This will open the **Sequence Viewer Window** to display your multiple sequence alignment, with a histogram of sequence conservation at the top (@fig-chimerax_sequence_viewer). The sequence associated with your protein model will be highlighted.
 
 ![`ChimeraX` with sequence viewer showing alignment for the model's protein sequences. The sequence associated with the protein model structure (`F8DQ39`) is highlighted with a red/orange background.](assets/images/chimerax/08-chimerax_sequence_viewer.png){#fig-chimerax_sequence_viewer width=75%}

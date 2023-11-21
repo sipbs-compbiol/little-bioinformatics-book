@@ -132,7 +132,7 @@ Below the mouse action legend on the right hand side of the window there is a se
 
 ![Activating the sequence selector.](assets/images/pymol/09-pymol_seq_selector.png){#fig-pymol_seq_selector width=75%}
 
-The scroll bar below the sequence allows you to find any part of the protein sequence (and additional molecules in the structure). The symbols are coloured to match the current structural representation, to aid with locating specific residues. For instance, in @fig-selecting_residues the residues for chain `B` are coloured in cyan. Residues can be selected by clicking and dragging within the displayed sequence, and the current selection is highlighted as `(sele)` in the object control panel. We can also select discontinuous sections of the structure, as in @fig-pymol_discontinuous_selection.
+The scroll bar below the sequence allows you to find any part of the protein sequence (and additional molecules in the structure). The symbols are coloured to match the current structural representation, to aid with locating specific residues. For instance, in @fig-pymol_selecting_residues the residues for chain `B` are coloured in cyan. Residues can be selected by clicking and dragging within the displayed sequence, and the current selection is highlighted as `(sele)` in the object control panel. We can also select discontinuous sections of the structure, as in @fig-pymol_discontinuous_selection.
 
 ![Selecting chain residues in `PyMOL` using the sequence viewer/selector](assets/images/pymol/10-pymol_selecting_residues.png){#fig-pymol_selecting_residues width=75%}
 
